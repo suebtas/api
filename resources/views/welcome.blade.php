@@ -158,59 +158,7 @@
 
 
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="owdapi/v1.0/WaterResource" class="underline text-gray-900 dark:text-white">B002	/WaterResourceInfo	ข้อมูลรายละเอียดแหล่งน้ำ</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <div>ตัวอย่าง HTTP Response Body จาก API สำหรับอ่านข้อมูลสถานีตรวจวัดตามรหัสสถานี</div>
-                                    <code>
-{
-	"meta": {
-		"apiVersion": "1.0",
-		"providerAgencyCode": "G09006",
-		"waterDataType": "B001"
-	},
-	"resourceType": "Station",
-	"id": "G09006-103662",
-	"agencyCode": "G09006",
-	"stationCode": "103662",
-	"stationName": "Rain บุตะโก",
-	"stationType": "P",
-	"stationDescription": "สถานีตรวจวัดน้ำฝน แบบอัตโนมัติ",
-	"stationOperingStatus": "1",
-	"locationCode": "100108",
-	"latitude": 14.43342,
-	"longitude": 101.87185,
-	"altitude": 4,
-	"subBasinCode": "0301",
-	"waterResource": {
-		"type": "WaterResourceInfo",
-		"id": "21-6303-1-0001",
-		"reference": "WaterReserveInfo/21-6303-1-0001"
-	},
-	"lastUpdate": "2022-01-01T17:30:00"
-}
-                                    </code>                                    
-                                </div>
-                            </div>
-                        </div>
-
                         
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
