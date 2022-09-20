@@ -13,7 +13,7 @@ class StationInfoRainfallResource extends JsonResource
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
-    {//dd($request);
+    { //dd($request);
         return [
             "resourceType"=> "RainfallMeasurement",
             "agencyCode"=> "$this->agencyCode",
@@ -22,7 +22,7 @@ class StationInfoRainfallResource extends JsonResource
                 "id"=> "$this->id",
                 "reference"=> sprintf("Station/%s-%s",$this->agencyCode,$this->id)
                 ],
-            "measurements"=>RainfallResource::collection($this->rainfall)];        
+            "measurements"=>RainfallResource::collection($this->conditionRainfall($request))];        
             //"measurements"=>$this->collection->map->toArray($request)->all()];        
     }
     

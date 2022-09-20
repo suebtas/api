@@ -8,12 +8,27 @@ use Illuminate\Database\Eloquent\Model;
 class StationInfo extends Model
 {
     use HasFactory;
-    public function rainfall()
-    {
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * 
+     */
+    public function rainfall($request)
+    {//dd($request);
         return $this->hasMany('App\Models\Rainfall');
     }
-    public function rainfallLastUpdate()
+    public function conditionRainfall($request)
     {
-        return $this->rainfall()->orderByDesc("measureDatetime")->limit(1);
+        //dd($request);
+        $obj = $this->rainfall($request);//->where("interval",$this->interval);
+        if(isset($request->startDate) && isset($request->endDate))
+            $obj = $obj->whereBetween('measureDatetime',["$request->startDate" , "$request->endDate"]);
+        return $obj->get();
+    }
+    public function rainfallLastUpdate($request)
+    {
+        //dd($request);
+        return $this->rainfall($request)->orderByDesc("measureDatetime")->limit(1)->get();
     }
 }

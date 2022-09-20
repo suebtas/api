@@ -22,7 +22,7 @@ class StationInfoLastUpdateRainfallResource extends JsonResource
                 "id"=> "$this->id",
                 "reference"=> sprintf("Station/%s-%s",$this->agencyCode,$this->id)
                 ],
-            "measurements"=>RainfallResource::collection($this->rainfallLastUpdate)];        
+            "measurements"=>RainfallResource::collection($this->rainfallLastUpdate($request))];        
     }
     
 }

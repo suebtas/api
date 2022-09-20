@@ -50,19 +50,19 @@
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                     <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="api/Rainfall" class="underline text-gray-900 dark:text-white">A001 /Rainfall ข้อมูลปริมาณน้ำฝน</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="owdapi/v1.0/Rainfall?interval=C-60&latest=true&startDate=2022-07-29 07:00:00&endDate=2022-07-30 07:00:00" class="underline text-gray-900 dark:text-white">A001 /Rainfall ข้อมูลปริมาณน้ำฝน</a></div>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <div>ตัวอย่าง HTTP Response Body ของข้อมูลปริมาณน้ำฝน 15 นาที</div>
+                                    <div>ตัวอย่าง HTTP Response Body ของข้อมูลปริมาณน้ำฝน 1 ชั่วโมง</div>
                                     <code >                                        
 {
 	"meta": {
 		"apiVersion": "1.0",
 		"providerAgencyCode": "G09006",
 		"waterDataType": "A001",
-		"interval": "C-15"
+		"interval": "C-60"
 	},
 	"resourceType": "Bundle",
 	"type": "searchset",
@@ -102,139 +102,12 @@
                             </div>
                         </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
-                                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="api/Runoff" class="underline text-gray-900 dark:text-white">A002 /Runoff ข้อมูลน้ำท่า</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <div>ตัวอย่าง HTTP Response Body ของข้อมูลน้ำท่ารายชั่วโมง (60นาที)</div>
-                                    <code >   
-                                        
-{
-	"meta": {
-		"apiVersion": "1.0",
-		"providerAgencyCode": "G09006",
-		"waterDataType": "A002",
-		"interval": "C-60"
-	},
-	"resourceType": "Bundle",
-	"type": "searchset",
-	"total": 1,
-	"entry": [
-		{
-			"resourceType": "RunoffMeasurement",
-			"agencyCode": "G09006",
-			"station": {
-				"type": "Station",
-				"id": "G09006-1032662",
-				"reference": "Station/G09006-1032662"
-			},
-			"measurements": [
-				{
-					"resourceType": "WaterLevel",
-					"measureDatetime": "2022-05-02T22:00:00",
-					"value": 38.23,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				},
-				{
-					"resourceType": "Discharge",
-					"measureDatetime": "2022-05-02T23:00:00",
-					"value": 313.12,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				}
-			]
-		}
-	]
-}
-                                    </code>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="api/WaterResource" class="underline text-gray-900 dark:text-white">A003 /WaterResource ข้อมูลแหล่งน้ำ</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <div>ตัวอย่าง HTTP Response Body ของข้อมูลแหล่งน้ำรายชั่วโมง (60นาที)</div>
-                                    <code>                                    
-{
-	"meta": {
-		"apiVersion": "1.0",
-		"providerAgencyCode": "G09006",
-		"waterDataType": "A003",
-		"interval": "C-60"
-	},
-	"resourceType": "Bundle",
-	"type": "searchset",
-	"total": 1,
-	"entry": [
-		{
-			"resourceType": "WaterResourceMeasurement",
-			"station": {
-				"type": "Station",
-				"id": "G09006-1032662",
-				"reference": "Station/G09006-1032662"
-			},
-			"measurements": [
-				{
-					"resourceType": "Storage",
-					"measureDatetime": "2022-05-02T23:00:00",
-					"value": 5468.8,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				},
-				{
-					"resourceType": "ActiveStorage",
-					"measureDatetime": "2022-05-02T23:00:00",
-					"value": 1668.8,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				},
-				{
-					"resourceType": "Inflow",
-					"measureDatetime": "2022-05-02T23:00:00",
-					"value": 0,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				},
-				{
-					"resourceType": "Outflow",
-					"measureDatetime": "2022-05-02T23:00:00",
-					"value": 6.5,
-					"qualityFlag": "U",
-					"comment": "Unchecked",
-					"qcLevel": "1"
-				}
-			]
-		}
-	]
-}
-                                    </code>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="api/StationInfo" class="underline text-gray-900 dark:text-white">B001	/StationInfo	ข้อมูลสถานี</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="owdapi/v1.0/StationInfo" class="underline text-gray-900 dark:text-white">B001	/StationInfo	ข้อมูลสถานี</a></div>
 
                             </div>
 
@@ -288,7 +161,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="api/WaterResourceInfo" class="underline text-gray-900 dark:text-white">B002	/WaterResourceInfo	ข้อมูลรายละเอียดแหล่งน้ำ</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="owdapi/v1.0/WaterResource" class="underline text-gray-900 dark:text-white">B002	/WaterResourceInfo	ข้อมูลรายละเอียดแหล่งน้ำ</a></div>
                             </div>
 
                             <div class="ml-12">
